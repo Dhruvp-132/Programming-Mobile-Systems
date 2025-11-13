@@ -1,0 +1,119 @@
+<!-- index.html for Part 1 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inventory Management System</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Inventory Management System</h1>
+    
+    <!-- Add Item Form -->
+    <section id="add-section">
+      <h2>Add Item</h2>
+      <form id="add-form">
+        <input type="text" id="add-id" placeholder="Item ID" required>
+        <input type="text" id="add-name" placeholder="Item Name" required>
+        <select id="add-category" required>
+          <option value="">Select Category</option>
+          <option value="Electronics">Electronics</option>
+          <option value="Furniture">Furniture</option>
+          <option value="Clothing">Clothing</option>
+          <option value="Tools">Tools</option>
+          <option value="Miscellaneous">Miscellaneous</option>
+        </select>
+        <input type="number" id="add-quantity" placeholder="Quantity" min="0" required>
+        <input type="number" id="add-price" placeholder="Price" min="0" step="0.01" required>
+        <input type="text" id="add-supplier" placeholder="Supplier Name" required>
+        <select id="add-status" required>
+          <option value="">Select Status</option>
+          <option value="In Stock">In Stock</option>
+          <option value="Low Stock">Low Stock</option>
+          <option value="Out of Stock">Out of Stock</option>
+        </select>
+        <select id="add-popular" required>
+          <option value="">Is Popular?</option>
+          <option value="true">Yes</option>
+          <option value="false">No</option>
+        </select>
+        <textarea id="add-comment" placeholder="Comment (optional)"></textarea>
+        <button type="submit">Add Item</button>
+      </form>
+      <div id="add-message"></div>
+    </section>
+    
+    <!-- Update Item Form -->
+    <section id="update-section">
+      <h2>Update Item (by Name)</h2>
+      <input type="text" id="update-name" placeholder="Enter Item Name to Update" required>
+      <button id="load-update">Load Item</button>
+      <form id="update-form" style="display: none;">
+        <input type="text" id="update-id" placeholder="Item ID" required>
+        <input type="text" id="update-item-name" placeholder="Item Name" required>
+        <select id="update-category" required>
+          <option value="Electronics">Electronics</option>
+          <option value="Furniture">Furniture</option>
+          <option value="Clothing">Clothing</option>
+          <option value="Tools">Tools</option>
+          <option value="Miscellaneous">Miscellaneous</option>
+        </select>
+        <input type="number" id="update-quantity" placeholder="Quantity" min="0" required>
+        <input type="number" id="update-price" placeholder="Price" min="0" step="0.01" required>
+        <input type="text" id="update-supplier" placeholder="Supplier Name" required>
+        <select id="update-status" required>
+          <option value="In Stock">In Stock</option>
+          <option value="Low Stock">Low Stock</option>
+          <option value="Out of Stock">Out of Stock</option>
+        </select>
+        <select id="update-popular" required>
+          <option value="true">Yes</option>
+          <option value="false">No</option>
+        </select>
+        <textarea id="update-comment" placeholder="Comment (optional)"></textarea>
+        <button type="submit">Update Item</button>
+      </form>
+      <div id="update-message"></div>
+    </section>
+    
+    <!-- Delete Item -->
+    <section id="delete-section">
+      <h2>Delete Item (by Name)</h2>
+      <input type="text" id="delete-name" placeholder="Enter Item Name to Delete" required>
+      <button id="confirm-delete">Delete Item</button>
+      <div id="delete-confirm" style="display: none;">
+        <p>Are you sure you want to delete this item?</p>
+        <button id="yes-delete">Yes</button>
+        <button id="no-delete">No</button>
+      </div>
+      <div id="delete-message"></div>
+    </section>
+    
+    <!-- Search Items -->
+    <section id="search-section">
+      <h2>Search Items (by Name)</h2>
+      <input type="text" id="search-name" placeholder="Enter Name to Search">
+      <button id="search-btn">Search</button>
+      <div id="search-results"></div>
+    </section>
+    
+    <!-- Display All Items -->
+    <section id="display-section">
+      <h2>All Items</h2>
+      <button id="display-all">Display All</button>
+      <div id="all-items"></div>
+    </section>
+    
+    <!-- Display Popular Items -->
+    <section id="popular-section">
+      <h2>Popular Items</h2>
+      <button id="display-popular">Display Popular</button>
+      <div id="popular-items"></div>
+    </section>
+  </div>
+  
+  <script src="app.js"></script> <!-- Compiled TypeScript -->
+</body>
+</html>

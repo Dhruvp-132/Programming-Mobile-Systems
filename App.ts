@@ -105,5 +105,5 @@ function renderItems(items: Item[]): string {
 }
 
 // Example usage (for testing in console with HTML)
-// console.log(addItem({ id: '1', name: 'Laptop', category: 'Electronics', quantity: 5, price: 1000, supplier: 'SupplierA', status: 'In Stock', popular: true, comment: 'Good item' }));
-// console.log(getAllItems());
+console.log(addItem({ id: '1', name: 'Laptop', category: 'Electronics', quantity: 5, price: 1000, supplier: 'SupplierA', status: 'In Stock', popular: true, comment: 'Good item' }));
+console.log(getAllItems());
